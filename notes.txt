@@ -1,0 +1,227 @@
+jdbc driver- we are using type 4 
+type 4 driver written in java- platform independent
+read about this.
+
+crreat proj
+add jdbc jar to proj
+create driver name -load driver
+even without loading u can directly cnonnnect after jdbc 4.0 version
+create conn to driver
+u need statement to fire the query.
+prepapred statement ane option kuda undito fire query
+statemt nt dont use. when we use query multiple time in program with just diff params, it will still compile every time.
+so use prepare statement
+by default queries are autocommited
+a transaction is with respect to a connection, not table
+within the boundary whatever u do will be permanent when u commit
+within the boundary if some error comes when we update or delete or smthng, error -> goes to catch -> so in catch put rollback
+transaction isolated level - read abt it
+transaction isolation level by default is read commited. ante read only committed record. but u can change also. con.setTransactionIsolation(); -> but not recommended to change
+connection pool available 1. dbcp 2.c3p0 3.hikari
+
+
+
+
+
+
+
+1.make packages layers
+2. find models- is a relationship
+   2 types of loans, types of cars ala. Make 1 abstract and 2 concrete clsses then.
+    u can make record instead of class. but u cant have 2 types apudu. andddd, u can have one obj as a field in another. like author in book.
+3. Make interface in storage. HAve the CRUD operations
+4. in constructor of storageimpl add atleast 1 or 2 models already so that smthg is there in a collection when obj of storageimpl creted
+
+
+
+
+
+
+
+
+8/8
+Browser -> Application
+Vendors -> Google chrome, MS Edge, Mozilla Firefox
+inline,block elements
+image
+main,footer,img,span,div all othr basic tags,
+
+TYPEs input - email tel url color range number search date
+section, main,aside,header,footer
+datalist
+
+browser provides runtime env for engine to execute js in browser
+callback - aynch
+return -synch
+
+without multipl e threads we achive non blocking in js
+promise-ES6-asynch calls kosam
+await, async, callback,promise
+
+
+
+14/8
+virtual threads
+spriing framework
+java -> spring -> springboot
+
+Object creation is complex
+spring framework, ioc,di
+
+IOC - C ANTE CREATE AND DESTROY
+ORDER CLIENT HAS CONTROL ON ORDER SERVICE BECAUSE IT HAS THE POWER TO CREATE AN OBJECT OF OBJECT SERVICE
+This is wrong
+Solution is I in IOC- INVERSE.
+
+Inversion of Control
+
+means delegate the object creatin job to someone else. 
+
+spring - by default singleton for any obj 
+if u want you can get diff objs scope ="prototype"
+if service doesn't have state- singleton.
+otherwise - prototype
+with spring contrxt dependency - ioc and di alone can be done
+configuring beans - wiring antaru
+noUniqueBeanDefinitionException
+primary keyword - incase of ambiquity take bean where primary is marked.
+annotation project 
+
+
+19/8
+AOP
+Specific concerns, Crosscutting concerns
+
+Aspect - the crosscutting concern
+Target
+Advice - when to apply(before,after,around,AfterReturning,AfterThrowing)
+PointCut- where to apply
+Jointpoint - points where pointcut is being applied
+
+Impedence Mismatch - tables loemo oka laga collections lo oka laaga
+Spring JDBC
+JDBC Tempate
+JDBC Client
+
+logger
+
+20/8 ameya sir
+MVC+ SPRINGBOOT
+Request Mappings
+URI Patterns,HTTP Methods, Request parameters
+oka http req lo ila- https:// localhost/ portfolio unte
+first it ll go to front controller. it ll hcekc, oh portfolio undhi ani. it ll pass i tto a controller which has request mapping /portfolio.
+If method not mentioned, default mapping for requestmapping is GET.
+REST- Architectural pattern for web sefvices, uses HTTP Spectification
+
+spring.sql.init.mode=always----always initialize database when app is bootstrapped
+logging.level.web=trace
+#above helps to see mapping of controller
+
+Hibernate is a ORM tool
+ORM- Object Relational Mapping
+JPA gives the annotations(interfaces). Hibernate/orm will implement it.
+JPA specification bridges the gap between relational tables and java
+Spring data repositories
+GET DATASERVICE PROJ FROM SOMEONE
+Microservices
+RestTemplate - used to connect the microservices
+
+21/8
+Movierestdemo , productservice priceservice( in microws)
+
+@ControllerAdvice
+@ExceptionHandler 
+
+
+eureka,springcloudgateway
+
+dependencies:
+web,dev tools(auto restart when there are changes),actuator spring boot (endpoints to manage app health)
+always add actuator
+
+
+22/8
+
+Is our app in microservices arch? - 12 factor app methodology decides
+adding gateway or routing and security. gateway also a microservice also registered in eureka service registry
+
+ivann eaSy ga cheyataniki Kubernetes vaadachu
+
+
+
+@DataJPATest
+Spring AI
+
+
+
+23/8
+react
+node js- runtime for js
+js runtime normally provided by browser. to run outside browser, js is used
+
+Js lo type is dynamically store. thats why ppl use typescript to maintain safety.
+var tho declare chesthe, we get global scope. let tho block scope.
+const values cant be changed
+
+java:maven:: node:npm - this is the relation
+
+C:\Users\Welcome\ReactApps\jscodesnippet>node calc.js
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\Welcome\\ReactApps\\jscodesnippet\\calc.js'
+]
+
+C:\Users\Welcome\ReactApps\jscodesnippet>node calc.js add 100 200
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\Welcome\\ReactApps\\jscodesnippet\\calc.js',
+  'add',
+  '100',
+  '200'
+]
+
+before add op was defined in calc.js, above was result.
+
+index.js is entry pt in react project.
+react comes with a dev server
+
+
+when html file created, browser that has a dom  creates a dom and shows that on web.
+when we create react file, renders to react dom(virtual dom), it sends to browser dom, 
+react dom thorugh enhuku why not direct ga ante beacus of performance. normally when there is a change in dom tree, entire tree is refereshed. but incase of react , only th epart that is changed is refereshed.
+react anni componnets la chstuhadhi. like login componetnt etc.
+
+html tags arent case sensitive. but in react, all html tags shld be in lowercase.
+
+every coomp has 2 compartments- view and model.{} binds model to view.
+// u shld have closing tag compulory. otherwise error in react
+
+
+26/8
+props
+event management
+state management
+In react, jsx is converted to pure js and sent to js.
+
+Soucr obj-> generates events-> evet handlers
+
+
+By default, view will not react to model. to make it react, we shld use useState() to make it change the value in view as well.
+
+Hook
+
+27/8
+props
+component communictin
+component life cycle
+form handling
+routing -Link,Routes,Route 
+axios
+
+
+ <Route path='details/:pid' element={<Details></Details>}></Route> 
+:tharvataha ochevi is like a parameter.
+lifecycle methods not applicable fr functional components.(cmpdidmount,cmpwillunmount)
+fns ki ->UseEffect
+
